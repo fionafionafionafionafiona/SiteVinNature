@@ -15,6 +15,109 @@ video {
   display: block;
 }
 
+:root {
+  --beige: #f4ebd4;
+  --brown: #786757;
+  --white: #ffffff;
+  --black: #000;
+  --text-font-size: 17px;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  background-color: var(--beige);
+  padding: 27px 44px 28px 11px;
+  .second {
+    display: inline-flex;
+    padding-bottom: 11px;
+    align-items: flex-end;
+    gap: 638px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .domaine {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .nav-langues {
+      display: flex;
+      align-items: flex-end;
+      gap: 44px;
+      .nav-second {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        font-size: 15px;
+      }
+      .langues {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        font-size: var(--text-font-size);
+        :nth-child(2) {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  .main {
+    display: inline-flex;
+    align-items: center;
+    gap: 493px;
+    .nav-icons {
+      display: flex;
+      padding-bottom: 10px;
+      justify-content: end;
+      align-items: center;
+      gap: 76px;
+      .nav-main {
+        display: flex;
+        align-items: center;
+        gap: 37px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .nav-main p:hover {
+        text-decoration-line: underline;
+        text-decoration-thickness: 7%;
+        text-underline-offset: 11%;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-family: "Font Awesome 6 Free";
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .icons p:hover {
+        font-size: 27px;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 47.2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.accueil {
+  display: flex;
+  padding: 74px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
 .row + .row {
   margin-top: 16px;
 }
@@ -27,7 +130,6 @@ video {
   border: 1px solid rgba(86, 61, 124, 0.2);
 }
 
-.header,
 .footer,
 .footer > [class] {
   padding-top: 12px;
