@@ -1,5 +1,25 @@
 @import "bootstrap/scss/bootstrap-grid";
 
+.row + .row {
+  margin-top: 16px;
+}
+
+.row > .col,
+.row > [class^="col-"] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
+.footer,
+.footer > [class] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,6 +33,7 @@ a {
 img,
 video {
   display: block;
+  max-width: 100%;
 }
 
 :root {
@@ -30,15 +51,14 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 17px;
   background-color: var(--beige);
-  padding: 27px 44px 28px 11px;
+  padding: 27px 44px 11px 28px;
   .second {
-    display: inline-flex;
+    display: flex;
     padding-bottom: 11px;
     align-items: flex-end;
-    gap: 638px;
+    justify-content: space-between;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     .domaine {
@@ -54,6 +74,26 @@ body {
         align-items: center;
         gap: 34px;
         font-size: 15px;
+        p::before {
+          display: inline-block;
+          content: "[";
+          opacity: 0;
+        }
+        p::after {
+          display: inline-block;
+          content: "]";
+          opacity: 0;
+        }
+        p:hover::before {
+          opacity: 1;
+          transform: translateX(-10px);
+          transition: 0.5s;
+        }
+        p:hover::after {
+          opacity: 1;
+          transform: translateX(10px);
+          transition: 0.5s;
+        }
       }
       .langues {
         display: flex;
@@ -67,9 +107,9 @@ body {
     }
   }
   .main {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 493px;
+    justify-content: space-between;
     .nav-icons {
       display: flex;
       padding-bottom: 10px;
@@ -97,43 +137,44 @@ body {
         font-weight: 900;
       }
       .icons p:hover {
-        font-size: 27px;
+        transform: scale(130%);
+        transition: 0.5s;
       }
     }
   }
 }
 
 h1 {
-  font-size: 47.2px;
+  font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.CTA.default {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  color: var(--brown);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.accueil img,
+.section img {
+  width: 100%;
 }
 
 .accueil {
   display: flex;
-  padding: 74px 0px;
+  margin: 74px 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
-}
-
-.row + .row {
-  margin-top: 16px;
-}
-
-.row > .col,
-.row > [class^="col-"] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-}
-
-.footer,
-.footer > [class] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
+  .CTA {
+    align-self: flex-start;
+  }
 }
