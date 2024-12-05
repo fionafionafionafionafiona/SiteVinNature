@@ -151,15 +151,31 @@ h1 {
   text-align: center;
 }
 
-.CTA.default {
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.CTA {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 5px;
+  padding: 10px 0px 13px 0px;
   color: var(--brown);
   font-size: 16px;
   font-weight: 400;
+}
+.CTA.beige {
+  background-color: var(--beige);
+  padding: 10px 15px 13px 15px;
+}
+.CTA.muscadelle {
+  position: absolute;
+  left: 680px;
+  bottom: -775px;
 }
 
 .accueil img,
@@ -176,5 +192,61 @@ h1 {
   gap: 16px;
   .CTA {
     align-self: flex-start;
+  }
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 120px;
+  .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+}
+
+.text-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 11px;
+  p {
+    text-align: justify;
+  }
+}
+
+.prefere {
+  h2 {
+    text-align: right;
+    padding-left: 300px;
+  }
+  .text-cta {
+    padding-right: 20px;
+  }
+}
+.philosophie {
+  h2 {
+    padding-left: 30px;
+  }
+  .text-cta {
+    padding-left: 34px;
+  }
+}
+.vigneron {
+  h2 {
+    text-align: right;
+    padding-left: 200px;
+  }
+}
+.visites {
+  h2 {
+    padding-left: 38px;
+  }
+  .text-cta {
+    padding-left: 29px;
   }
 }
