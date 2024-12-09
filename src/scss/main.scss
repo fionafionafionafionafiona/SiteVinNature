@@ -37,6 +37,11 @@ video {
   max-width: 100%;
 }
 
+svg {
+  align-self: stretch;
+  stroke-width: 1px;
+}
+
 :root {
   --beige: #f4ebd4;
   --brown: #786757;
@@ -362,12 +367,21 @@ h4 {
     font-size: 16px;
     font-weight: 400;
   }
-
-  // FLECHE transform-origin: center left;
+  svg {
+    transition: 0.5s;
+  }
+}
+.CTA:hover svg {
+  transform-origin: center left;
+  transform: scaleX(115%);
 }
 .CTA.beige {
   background-color: var(--beige);
-  padding: 10px 15px 13px 15px;
+  padding: 10px 20px 13px 15px;
+}
+.CTA.beige:hover svg {
+  transform-origin: center left;
+  transform: scaleX(105%);
 }
 .CTA.brown {
   color: var(--beige);
