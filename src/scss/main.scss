@@ -28,6 +28,7 @@
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img,
@@ -41,7 +42,6 @@ video {
   --brown: #786757;
   --white: #ffffff;
   --black: #000;
-  --text-font-size: 17px;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
   flex-direction: column;
   gap: 17px;
   background-color: var(--beige);
-  padding: 27px 44px 11px 28px;
+  padding: 27px 44px 27px 28px;
   .second {
     display: flex;
     padding-bottom: 11px;
@@ -74,25 +74,25 @@ body {
         align-items: center;
         gap: 34px;
         font-size: 15px;
-        p::before {
+        a::before {
           display: inline-block;
+          transition: 0.5s;
           content: "[";
           opacity: 0;
         }
-        p::after {
+        a::after {
           display: inline-block;
+          transition: 0.5s;
           content: "]";
           opacity: 0;
         }
-        p:hover::before {
+        a:hover::before {
           opacity: 1;
           transform: translateX(-10px);
-          transition: 0.5s;
         }
-        p:hover::after {
+        a:hover::after {
           opacity: 1;
           transform: translateX(10px);
-          transition: 0.5s;
         }
       }
       .langues {
@@ -120,10 +120,12 @@ body {
         display: flex;
         align-items: center;
         gap: 37px;
-        font-size: 24px;
-        font-weight: 500;
+        a {
+          font-size: 24px;
+          font-weight: 500;
+        }
       }
-      .nav-main p:hover {
+      .nav-main a:hover {
         text-decoration-line: underline;
         text-decoration-thickness: 7%;
         text-underline-offset: 11%;
@@ -132,16 +134,20 @@ body {
         display: flex;
         align-items: center;
         gap: 11px;
-        font-family: "Font Awesome 6 Free";
-        font-size: 21px;
-        font-weight: 900;
+        img {
+          transition: 0.5s;
+        }
       }
-      .icons p:hover {
+      .icons img:hover {
         transform: scale(130%);
-        transition: 0.5s;
       }
     }
   }
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
 }
 
 h1 {
@@ -154,6 +160,13 @@ h1 {
 h2 {
   font-size: 40px;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+h4 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -203,9 +216,6 @@ h2 {
     text-align: right;
     padding-left: 300px;
   }
-  .text-cta {
-    padding-right: 20px;
-  }
 }
 .philosophie {
   h2 {
@@ -226,7 +236,7 @@ h2 {
     padding-left: 38px;
   }
   .text-cta {
-    padding-left: 29px;
+    padding-left: 50px;
   }
 }
 
@@ -258,12 +268,12 @@ h2 {
       .votre-email {
         display: flex;
         height: 44px;
-        padding: 13px 279px 14px 10px;
+        width: 330px;
+        padding: 13px 0px 14px 10px;
         align-items: center;
         gap: 10px;
         border: 1px solid var(--brown);
         p {
-          text-align: center;
           font-size: 14px;
           font-weight: 300;
         }
@@ -275,7 +285,68 @@ h2 {
     padding-top: 40px;
     flex-direction: column;
     align-items: center;
-    background-color: var(--beige);
+    background-color: #f8f4e9;
+  }
+  .content {
+    display: flex;
+    padding-top: 36px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    align-self: stretch;
+    .adresse,
+    .contact,
+    .horaire {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 14px;
+      p {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .adresse,
+    .contact {
+      p:hover {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 5%;
+        text-underline-offset: 11%;
+        text-underline-position: from-font;
+      }
+    }
+    .social-media {
+      display: flex;
+      padding: 0px 18px;
+      align-items: center;
+      gap: 13px;
+      img:hover {
+        transform: scale(130%);
+      }
+    }
+  }
+  .copyrights {
+    padding: 48px 0px 47px;
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .cookies {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      align-self: stretch;
+      p {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+      }
+    }
   }
 }
 
@@ -287,8 +358,11 @@ h2 {
   gap: 5px;
   padding: 10px 0px 13px;
   color: var(--brown);
-  font-size: 16px;
-  font-weight: 400;
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
   // FLECHE transform-origin: center left;
 }
 .CTA.beige {
@@ -300,7 +374,7 @@ h2 {
   background: var(--brown);
   height: 44px;
   padding: 10px 15px 13px 15px;
-  gap: 5px;
+  gap: 0px;
 }
 .CTA.muscadelle {
   position: absolute;

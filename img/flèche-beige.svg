@@ -1,0 +1,28 @@
+<svg width="110" height="12" viewBox="0 0 110 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="110" height="12" fill="#1E1E1E"/>
+<g id="B-Homepage-Hover" clip-path="url(#clip0_3162_595)">
+<rect width="1440" height="3442" transform="translate(-999 -2919)" fill="white"/>
+<g id="Group 1">
+<g id="footer">
+<rect width="1444" height="660" transform="translate(-1001 -106)" fill="white"/>
+<g id="newsletter">
+<rect width="1444" height="200" transform="translate(-1001 -106)" fill="#F4EBD4"/>
+<g id="mail">
+<g id="votre email">
+<rect x="-369.5" y="-27.5" width="358" height="43" stroke="#786757"/>
+<g id="CTA">
+<rect width="138" height="44" transform="translate(-14 -28)" fill="#786757"/>
+<path id="fl&#195;&#168;che" d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM109.53 6.53033C109.823 6.23744 109.823 5.76256 109.53 5.46967L104.757 0.696699C104.464 0.403806 103.99 0.403806 103.697 0.696699C103.404 0.989592 103.404 1.46447 103.697 1.75736L107.939 6L103.697 10.2426C103.404 10.5355 103.404 11.0104 103.697 11.3033C103.99 11.5962 104.464 11.5962 104.757 11.3033L109.53 6.53033ZM1 6.75H109V5.25H1V6.75Z" fill="#F4EBD4"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_3162_595">
+<rect width="1440" height="3442" fill="white" transform="translate(-999 -2919)"/>
+</clipPath>
+</defs>
+</svg>
