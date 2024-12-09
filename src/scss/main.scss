@@ -35,11 +35,14 @@ img,
 video {
   display: block;
   max-width: 100%;
+  transition: 0.5s;
+}
+.img-container {
+  overflow: hidden;
 }
 
-svg {
-  align-self: stretch;
-  stroke-width: 1px;
+img:hover {
+  transform: scale(105%);
 }
 
 :root {
@@ -249,10 +252,9 @@ h4 {
   color: var(--brown);
   .logos {
     display: flex;
-    width: 1443px;
     padding: 44px 39px;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: right;
+    align-items: right;
     gap: 22px;
   }
   .newsletter {
@@ -331,6 +333,12 @@ h4 {
         transform: scale(130%);
       }
     }
+    .adresse {
+      padding-left: 100px;
+    }
+    .horaire {
+      padding-right: 100px;
+    }
   }
   .copyrights {
     padding: 48px 0px 47px;
@@ -394,6 +402,7 @@ h4 {
   position: absolute;
   left: -73px;
   bottom: 16px;
+  z-index: 10;
 }
 .img-wrapper {
   position: relative;
