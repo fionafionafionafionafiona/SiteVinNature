@@ -1,77 +1,132 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>eikon parcel starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scss/main.scss" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="header">
-      header
-      <a href="index.html">Accueil</a>
-      <a href="vin-rouge.html">Vin Rouge</a>
-      <a href="vin-blanc.html">Vin Blanc</a>
-    </div>
+<extends src="base-layout.html">
+  <block name="content">
     <div class="container">
       <div class="row">
-        <div class="col-12">fil d'ariane</div>
+        <div class="col-12">
+          <div class="bread-crumbs">
+            <a href="index.html"> <img src="/img/home.svg" alt="Accueil" /></a>
+            <p>/</p>
+            <p>Nos Vins</p>
+            <p>/</p>
+            <p>Vins blancs</p>
+            <p>/</p>
+            <p><strong>Gewürztraminer</strong></p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-5">img</div>
+        <div class="col-5">
+          <div class="img-wrapper">
+            <div class="img-container">
+              <img
+                class="vin-image"
+                src="/img/vin-blanc.png"
+                alt="Image illustrative de notre Gewürztraminer"
+              />
+            </div>
+            <div class="CTA brown commander">
+              <p>Commander</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="113"
+                height="8"
+                viewBox="0 0 113 8"
+                fill="none"
+              >
+                <path
+                  d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM112.354 4.35355C112.549 4.15829 112.549 3.84171 112.354 3.64645L109.172 0.464466C108.976 0.269204 108.66 0.269204 108.464 0.464466C108.269 0.659728 108.269 0.976311 108.464 1.17157L111.293 4L108.464 6.82843C108.269 7.02369 108.269 7.34027 108.464 7.53553C108.66 7.7308 108.976 7.7308 109.172 7.53553L112.354 4.35355ZM1 4.5H112V3.5H1V4.5Z"
+                  fill="#F4EBD4"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
         <div class="col-6 offset-1">
-          nom vin - informations vin
-          <div class="row">
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
-            <div class="col-4">catégorie</div>
-            <div class="col-8">info</div>
+          <div class="vin-nom">
+            <h5>Gewürztraminer</h5>
+            <img
+              src="/img/Logo-Bio-Suisse.svg"
+              alt="Logo certifié Bio Suisse"
+            />
+          </div>
+
+          <div class="vin-informations">
+            <div class="row">
+              <div class="col-4">Cépage</div>
+              <div class="col-8">100% Gewürztraminer</div>
+              <div class="col-4">Milésime actuel</div>
+              <div class="col-8">2024</div>
+              <div class="col-4">Premier milésime</div>
+              <div class="col-8">2007</div>
+              <div class="col-4">Provenance</div>
+              <div class="col-8">Vallée du Rhône, Valais, Suisse</div>
+              <div class="col-4">Vinification</div>
+              <div class="col-8">
+                Les raisins de Gewürztraminer sont récoltés à la main à pleine
+                maturité, puis doucement pressés pour extraire le jus. La
+                fermentation se fait en cuves inox à température contrôlée,
+                préservant ainsi les arômes délicats. Un élevage sur lies fines
+                de 6 mois ajoute richesse et complexité.
+              </div>
+              <div class="col-4">Notes de dégustation</div>
+              <div class="col-8">
+                Ce vin blanc présente une belle robe dorée. Au nez, il offre un
+                bouquet intense de fleurs blanches, de lychee et d’épices. En
+                bouche, il est riche, avec une douceur harmonieuse et une finale
+                fraîche.
+              </div>
+              <div class="col-4">Accords Mets et Vins</div>
+              <div class="col-8">
+                Parfait avec des plats épicés, des plats asiatiques ou des
+                fromages à pâte persillée, ce vin s’accorde aussi
+                merveilleusement avec des desserts fruités.
+              </div>
+              <div class="col-4">Température de service</div>
+              <div class="col-8">À servir frais, entre 8 et 10 °C.</div>
+              <div class="col-4">Potentiel de garde</div>
+              <div class="col-8">
+                À déguster dès maintenant ou à garder jusqu’à 4 ans pour
+                profiter de ses arômes évolutifs.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-12">invitation visite</div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="logos">logos</div>
-      <div class="newletter">newsletter</div>
-      <div class="informations">
-        footer
-        <div class="container">
-          <div class="row">
-            <div class="col-5">adresse</div>
-            <div class="col-2">contact</div>
-            <div class="col-5">horaire</div>
+      <div class="vin-visite">
+        <div class="row">
+          <div class="col-12">
+            <h6>Découvrez soror au cœur du valais</h6>
+            <div class="img-wrapper">
+              <div class="img-container">
+                <img
+                  src="/img/visite-vin-blanc.png"
+                  alt="Photographie des montagnes valaisannes"
+                />
+                <div class="CTA beige visite">
+                  <p>Nous rendre visite</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="147"
+                    height="8"
+                    viewBox="0 0 147 8"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM146.354 4.35355C146.549 4.15829 146.549 3.84171 146.354 3.64645L143.172 0.464466C142.976 0.269204 142.66 0.269204 142.464 0.464466C142.269 0.659728 142.269 0.976311 142.464 1.17157L145.293 4L142.464 6.82843C142.269 7.02369 142.269 7.34027 142.464 7.53553C142.66 7.7308 142.976 7.7308 143.172 7.53553L146.354 4.35355ZM1 4.5H146V3.5H1V4.5Z"
+                      fill="#786757"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h6>visites authentiques, vins d’exception</h6>
           </div>
         </div>
-        cookies
       </div>
     </div>
-    <script src="js/main.js" type="module"></script>
-  </body>
-</html>
+  </block>
+</extends>

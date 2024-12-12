@@ -37,12 +37,11 @@ video {
   max-width: 100%;
   transition: 0.8s;
 }
-.img-container {
-  overflow: hidden;
-}
-
 img:hover {
   transform: scale(105%);
+}
+.img-container {
+  overflow: hidden;
 }
 .img-wrapper {
   position: relative;
@@ -437,6 +436,9 @@ body {
     padding: 17px 0;
   }
 }
+.vin-image {
+  margin-top: -10px;
+}
 
 // CTA
 
@@ -478,18 +480,18 @@ body {
   left: -73px;
   bottom: 16px;
 }
-.CTA.beige:hover svg {
-  transform: scaleX(105%);
+.CTA.muscadelle:hover svg {
+  transform: scaleX(107%);
 }
 .CTA.visite {
-  padding: 10px 30px 13px 30px;
+  padding: 10px 35px 13px 30px;
   position: absolute;
-  right: 650px;
-  bottom: -550px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
-
 .CTA.commander {
   position: absolute;
-  top: 870px;
-  left: 520px;
+  right: -39px;
+  bottom: 21px;
 }
